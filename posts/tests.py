@@ -27,7 +27,7 @@ class PostTests(TestCase):
         response = self.client.get(reverse("home"))
         self.assertContains(response, "This is a test")
 
-    def test_homepage(self):  # correct way
+    def test_homepage(self):  # correct way (Best Practice)
         response = self.client.get(reverse("home"))
         self.assertContains(response, "This is a test!")
         self.assertEqual(response.status_code, 200)
